@@ -1,0 +1,6 @@
+framework module Pods_RLCoreAnimationPractice {
+  umbrella header "Pods-RLCoreAnimationPractice-umbrella.h"
+
+  export *
+  module * { export * }
+}

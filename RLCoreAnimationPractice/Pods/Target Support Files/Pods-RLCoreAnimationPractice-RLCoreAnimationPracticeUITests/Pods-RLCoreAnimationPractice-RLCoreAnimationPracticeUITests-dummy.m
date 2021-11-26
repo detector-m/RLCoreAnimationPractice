@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_RLCoreAnimationPractice_RLCoreAnimationPracticeUITests : NSObject
+@end
+@implementation PodsDummy_Pods_RLCoreAnimationPractice_RLCoreAnimationPracticeUITests
+@end
