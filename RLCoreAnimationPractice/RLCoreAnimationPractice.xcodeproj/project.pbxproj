@@ -18,6 +18,8 @@
 		27B7214D2750E1180020247E /* RLCoreAnimationPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7214C2750E1180020247E /* RLCoreAnimationPracticeUITests.swift */; };
 		27B7215C2750E9380020247E /* RLLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7215B2750E9380020247E /* RLLog.swift */; };
 		27B7215F2750EB170020247E /* RLSQLLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7215E2750EB170020247E /* RLSQLLiteManager.swift */; };
+		27B721632750F4800020247E /* RLBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B721622750F4800020247E /* RLBaseVC.swift */; };
+		27B721652750F4960020247E /* RLCoreAnimationPracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B721642750F4960020247E /* RLCoreAnimationPracticeVC.swift */; };
 		2AD6B8CD5DBB1A68CA0C0A45 /* Pods_RLCoreAnimationPractice_RLCoreAnimationPracticeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E0DFB9494E37D48F317E7B /* Pods_RLCoreAnimationPractice_RLCoreAnimationPracticeUITests.framework */; };
 		8E0C319DA8177DCBA059267C /* Pods_RLCoreAnimationPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D6195E3AEE831FE33F4758 /* Pods_RLCoreAnimationPractice.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,8 @@
 		27B7214E2750E1180020247E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B7215B2750E9380020247E /* RLLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLLog.swift; sourceTree = "<group>"; };
 		27B7215E2750EB170020247E /* RLSQLLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLSQLLiteManager.swift; sourceTree = "<group>"; };
+		27B721622750F4800020247E /* RLBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLBaseVC.swift; sourceTree = "<group>"; };
+		27B721642750F4960020247E /* RLCoreAnimationPracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLCoreAnimationPracticeVC.swift; sourceTree = "<group>"; };
 		330616E45C06935ECE11FA8A /* Pods-RLCoreAnimationPractice-RLCoreAnimationPracticeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RLCoreAnimationPractice-RLCoreAnimationPracticeUITests.release.xcconfig"; path = "Target Support Files/Pods-RLCoreAnimationPractice-RLCoreAnimationPracticeUITests/Pods-RLCoreAnimationPractice-RLCoreAnimationPracticeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		849893CA706073CA2DB7E58E /* Pods-RLCoreAnimationPractice-RLCoreAnimationPracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RLCoreAnimationPractice-RLCoreAnimationPracticeUITests.debug.xcconfig"; path = "Target Support Files/Pods-RLCoreAnimationPractice-RLCoreAnimationPracticeUITests/Pods-RLCoreAnimationPractice-RLCoreAnimationPracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A87353C49E480D2E0C70BDD4 /* Pods-RLCoreAnimationPracticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RLCoreAnimationPracticeTests.debug.xcconfig"; path = "Target Support Files/Pods-RLCoreAnimationPracticeTests/Pods-RLCoreAnimationPracticeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 		27B721292750E1100020247E /* RLCoreAnimationPractice */ = {
 			isa = PBXGroup;
 			children = (
+				27B721612750F46A0020247E /* Base */,
+				27B721602750ECA60020247E /* CoreAnimationPractice */,
 				27B7215D2750EAED0020247E /* SQLLite */,
 				27B7215A2750E9060020247E /* Log */,
 				27B7212A2750E1100020247E /* AppDelegate.swift */,
@@ -178,6 +184,22 @@
 				27B7215E2750EB170020247E /* RLSQLLiteManager.swift */,
 			);
 			path = SQLLite;
+			sourceTree = "<group>";
+		};
+		27B721602750ECA60020247E /* CoreAnimationPractice */ = {
+			isa = PBXGroup;
+			children = (
+				27B721642750F4960020247E /* RLCoreAnimationPracticeVC.swift */,
+			);
+			path = CoreAnimationPractice;
+			sourceTree = "<group>";
+		};
+		27B721612750F46A0020247E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				27B721622750F4800020247E /* RLBaseVC.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		ED6A150C02B48FD89E109DAF /* Frameworks */ = {
@@ -428,9 +450,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B721652750F4960020247E /* RLCoreAnimationPracticeVC.swift in Sources */,
 				27B7212F2750E1100020247E /* ViewController.swift in Sources */,
 				27B7212B2750E1100020247E /* AppDelegate.swift in Sources */,
 				27B7215C2750E9380020247E /* RLLog.swift in Sources */,
+				27B721632750F4800020247E /* RLBaseVC.swift in Sources */,
 				27B7212D2750E1100020247E /* SceneDelegate.swift in Sources */,
 				27B7215F2750EB170020247E /* RLSQLLiteManager.swift in Sources */,
 			);

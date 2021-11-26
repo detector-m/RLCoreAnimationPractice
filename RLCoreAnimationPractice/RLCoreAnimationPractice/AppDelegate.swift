@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         configLog()
         
-        RLSQLLiteManager.sqlLiteTest()
+//        RLSQLLiteManager.sqlLiteTest()
         
         return true
     }
