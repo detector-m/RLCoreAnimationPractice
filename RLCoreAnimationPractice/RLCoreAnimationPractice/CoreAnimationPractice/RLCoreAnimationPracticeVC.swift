@@ -21,6 +21,18 @@ extension RLCoreAnimationPracticeVC {
         view.backgroundColor = .gray
         
         title = "Practice"
+        
+//        addSubLayers()
+//
+//        setLayerContents()
+//
+//        setLayerContentsRect()
+//
+//        setLayerContentsCenter()
+//
+//        setLayerShadow()
+        
+        setLayerTranform()
     }
     
 }
@@ -33,14 +45,6 @@ extension RLCoreAnimationPracticeVC {
         
         layerView.backgroundColor = .white
         view.addSubview(layerView)
-        
-        addSubLayers()
-        
-//        setLayerContents()
-        
-//        setLayerContentsRect()
-        
-//        setLayerContentsCenter()
     }
     
     override func relayoutSubViews() {
@@ -80,6 +84,54 @@ extension RLCoreAnimationPracticeVC {
         layerView.layer.contents = image?.cgImage
         
         layerView.layer.contentsCenter = CGRect(x: 0.25, y: 0.2, width: 0.4, height: 0.4)
+    }
+    
+    func setLayerShadow() {
+        let image = UIImage(named: "motion")
+        
+        layerView.layer.contents = image?.cgImage
+        layerView.layer.contentsGravity = .center
+        layerView.layer.contentsScale = 2
+        
+        layerView.layer.shadowOpacity = 0.5
+        layerView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        
+        // 阴影的模糊度
+        layerView.layer.shadowRadius = 10
+    }
+    
+}
+
+// MARK: - 变换
+@objc extension RLCoreAnimationPracticeVC {
+    
+    func setLayerTranform() {
+        setLayerContents()
+    
+//        setLayerRotationTransform()
+        
+        setLayerBlendTransform()
+    }
+    
+    // 旋转变换
+    func setLayerRotationTransform() {
+        let rotationTransform = CGAffineTransform(rotationAngle: .pi / 4)
+        layerView.layer.setAffineTransform(rotationTransform)
+    }
+    
+    // 我们来用这些函数组合一个更加复杂的变换，先缩小50%，再旋转30度，最后向右移动200个像素
+    func setLayerBlendTransform() {
+        // create a new transform
+        var cTransform = CGAffineTransform.identity
+        // scale by 50%
+        cTransform = cTransform.scaledBy(x: 0.5, y: 0.5)
+        // translate by 200 points
+        cTransform = cTransform.translatedBy(x: 200, y: 200)
+        
+        // rotate by 30 degrees
+        cTransform = cTransform.rotated(by: .pi * 1.2)
+        
+        layerView.layer.setAffineTransform(cTransform)
     }
     
 }
