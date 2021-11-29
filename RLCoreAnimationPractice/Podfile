@@ -7,6 +7,8 @@ target 'RLCoreAnimationPractice' do
 
   pod 'SQLite.swift'
   pod 'SwiftyBeaver'
+  
+  pod 'SnapKit'
 
   # Pods for RLCoreAnimationPractice
 
@@ -20,3 +22,5 @@ target 'RLCoreAnimationPractice' do
   end
 
 end
+
+
