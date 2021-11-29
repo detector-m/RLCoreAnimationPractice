@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: RLBaseVC {
     
     static let cellId = "TBCell"
     
@@ -22,12 +22,24 @@ extension ViewController {
         
         title = "App"
         
-        tableView.frame = view.bounds
-        view.addSubview(tableView)
         configTableView()
     }
     
 }
+
+@objc extension ViewController {
+    
+    override func addSubViews() {
+        super.addSubViews()
+        view.addSubview(tableView)
+    }
+    
+    override func relayoutSubViews() {
+        tableView.frame = view.bounds
+    }
+    
+}
+
 
 extension ViewController {
     
