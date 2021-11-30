@@ -13,7 +13,7 @@ class ViewController: RLBaseVC {
     
     fileprivate lazy var tableView: UITableView = UITableView(frame: view.bounds, style: .grouped)
     
-    fileprivate lazy var practiceTypes: [RLCAPracticeType] = [.normal, .shapeLayer, .textLayer]
+    fileprivate lazy var practiceTypes: [RLCAPracticeType] = [.normal, .shapeLayer, .textLayer, .transformLayer]
 
 }
 
@@ -105,6 +105,9 @@ extension ViewController: UITableViewDataSource & UITableViewDelegate {
             
         case .textLayer:
             gotoTextLayer(type: cType)
+            
+        case .transformLayer:
+            gotoTransformLayer(type: cType)
         }
         
     }
@@ -143,6 +146,12 @@ extension ViewController {
     
     fileprivate func gotoTextLayer(type: RLCAPracticeType) {
         let vc = RLCATextLayerVC()
+        vc.title = type.string
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    fileprivate func gotoTransformLayer(type: RLCAPracticeType) {
+        let vc = RLCATransformLayerVC()
         vc.title = type.string
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -7,9 +7,7 @@
 
 import UIKit
 
-class RLCATextLayerVC: RLBaseVC {
-
-    lazy var layerView = UIView()
+class RLCATextLayerVC: RLCALayerPracticeBaseVC {
     
 }
 
@@ -17,10 +15,6 @@ extension RLCATextLayerVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .white
-        
-        addTextLayer()
     }
     
 }
@@ -30,14 +24,16 @@ extension RLCATextLayerVC {
     override func addSubViews() {
         super.addSubViews()
         
-        
         layerView.backgroundColor = .gray
-        view.addSubview(layerView)
     }
     
     override func relayoutSubViews() {
         layerView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
         layerView.center = view.center
+    }
+    
+    override func addSubLayers() {
+        addTextLayer()
     }
     
 }

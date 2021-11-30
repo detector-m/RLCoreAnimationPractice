@@ -7,9 +7,7 @@
 
 import UIKit
 
-class RLCAShapeLayerPracticeVC: RLBaseVC {
-    
-    lazy var layerView = UIView()
+class RLCAShapeLayerPracticeVC: RLCALayerPracticeBaseVC {
     
 }
 
@@ -18,10 +16,6 @@ extension RLCAShapeLayerPracticeVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .white
-        
-        addShapeLayer()
     }
     
 }
@@ -31,14 +25,16 @@ extension RLCAShapeLayerPracticeVC {
     override func addSubViews() {
         super.addSubViews()
         
-        
         layerView.backgroundColor = .gray
-        view.addSubview(layerView)
     }
     
     override func relayoutSubViews() {
         layerView.frame = view.bounds
         layerView.center = view.center
+    }
+    
+    override func addSubLayers() {
+        addShapeLayer()
     }
     
 }
