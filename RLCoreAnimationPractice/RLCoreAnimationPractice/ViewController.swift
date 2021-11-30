@@ -13,7 +13,7 @@ class ViewController: RLBaseVC {
     
     fileprivate lazy var tableView: UITableView = UITableView(frame: view.bounds, style: .grouped)
     
-    fileprivate lazy var practiceTypes: [RLCAPracticeType] = [.normal, .shapeLayer, .textLayer, .transformLayer]
+    fileprivate lazy var practiceTypes: [RLCAPracticeType] = [.normal, .shapeLayer, .textLayer, .transformLayer, .gradientLayer]
 
 }
 
@@ -108,6 +108,9 @@ extension ViewController: UITableViewDataSource & UITableViewDelegate {
             
         case .transformLayer:
             gotoTransformLayer(type: cType)
+            
+        case .gradientLayer:
+            gotoGradientLayerVC(type: cType)
         }
         
     }
@@ -152,6 +155,21 @@ extension ViewController {
     
     fileprivate func gotoTransformLayer(type: RLCAPracticeType) {
         let vc = RLCATransformLayerVC()
+        vc.title = type.string
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    fileprivate func gotoGradientLayerVC(type: RLCAPracticeType) {
+        gotoLayerVC(vcType: RLCAGradientLayerVC.self, type: type)
+    }
+    
+}
+
+
+extension ViewController {
+    
+    fileprivate func gotoLayerVC<T: UIViewController>(vcType: T.Type, type: RLCAPracticeType) {
+        let vc = vcType.init()
         vc.title = type.string
         navigationController?.pushViewController(vc, animated: true)
     }

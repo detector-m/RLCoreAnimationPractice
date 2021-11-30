@@ -14,6 +14,7 @@ enum RLCAPracticeType {
     case shapeLayer
     case textLayer
     case transformLayer
+    case gradientLayer
         
 }
 
@@ -32,6 +33,9 @@ extension RLCAPracticeType {
             
         case .transformLayer:
             return "transform layer"
+        
+        case .gradientLayer:
+            return "gradient layer"
         }
     }
     

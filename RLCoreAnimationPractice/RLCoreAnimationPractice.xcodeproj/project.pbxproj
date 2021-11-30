@@ -15,6 +15,7 @@
 		27756D562755F52900253C8B /* RLCATextLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756D552755F52900253C8B /* RLCATextLayerVC.swift */; };
 		27756D582756140500253C8B /* RLCALayerPracticeBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756D572756140500253C8B /* RLCALayerPracticeBaseVC.swift */; };
 		27756D5A2756158D00253C8B /* RLCATransformLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756D592756158D00253C8B /* RLCATransformLayerVC.swift */; };
+		27756D5C27562A9400253C8B /* RLCAGradientLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756D5B27562A9400253C8B /* RLCAGradientLayerVC.swift */; };
 		27B7212B2750E1100020247E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7212A2750E1100020247E /* AppDelegate.swift */; };
 		27B7212D2750E1100020247E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7212C2750E1100020247E /* SceneDelegate.swift */; };
 		27B7212F2750E1100020247E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7212E2750E1100020247E /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		27756D552755F52900253C8B /* RLCATextLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLCATextLayerVC.swift; sourceTree = "<group>"; };
 		27756D572756140500253C8B /* RLCALayerPracticeBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLCALayerPracticeBaseVC.swift; sourceTree = "<group>"; };
 		27756D592756158D00253C8B /* RLCATransformLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLCATransformLayerVC.swift; sourceTree = "<group>"; };
+		27756D5B27562A9400253C8B /* RLCAGradientLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLCAGradientLayerVC.swift; sourceTree = "<group>"; };
 		27B721272750E1100020247E /* RLCoreAnimationPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RLCoreAnimationPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B7212A2750E1100020247E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B7212C2750E1100020247E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				27756D512755D40300253C8B /* RLCAShapeLayerPracticeVC.swift */,
 				27756D552755F52900253C8B /* RLCATextLayerVC.swift */,
 				27756D592756158D00253C8B /* RLCATransformLayerVC.swift */,
+				27756D5B27562A9400253C8B /* RLCAGradientLayerVC.swift */,
 			);
 			path = CALayers;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				27756D522755D40300253C8B /* RLCAShapeLayerPracticeVC.swift in Sources */,
 				27B7215C2750E9380020247E /* RLLog.swift in Sources */,
 				27B721632750F4800020247E /* RLBaseVC.swift in Sources */,
+				27756D5C27562A9400253C8B /* RLCAGradientLayerVC.swift in Sources */,
 				27756D582756140500253C8B /* RLCALayerPracticeBaseVC.swift in Sources */,
 				27B7212D2750E1100020247E /* SceneDelegate.swift in Sources */,
 				27756D4F2754674100253C8B /* RLUIBaseProtocol.swift in Sources */,
