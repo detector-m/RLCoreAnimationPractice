@@ -10,6 +10,9 @@
 		1ACB700F2D902B9D1F4B3DD5 /* Pods_RLCoreAnimationPracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D783E86164549EF874D71110 /* Pods_RLCoreAnimationPracticeTests.framework */; };
 		27756D4D275466E400253C8B /* RLBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756D4C275466E400253C8B /* RLBaseView.swift */; };
 		27756D4F2754674100253C8B /* RLUIBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756D4E2754674100253C8B /* RLUIBaseProtocol.swift */; };
+		27756D522755D40300253C8B /* RLCAShapeLayerPracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756D512755D40300253C8B /* RLCAShapeLayerPracticeVC.swift */; };
+		27756D542755D49200253C8B /* RLCAPracticeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756D532755D49200253C8B /* RLCAPracticeType.swift */; };
+		27756D562755F52900253C8B /* RLCATextLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27756D552755F52900253C8B /* RLCATextLayerVC.swift */; };
 		27B7212B2750E1100020247E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7212A2750E1100020247E /* AppDelegate.swift */; };
 		27B7212D2750E1100020247E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7212C2750E1100020247E /* SceneDelegate.swift */; };
 		27B7212F2750E1100020247E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7212E2750E1100020247E /* ViewController.swift */; };
@@ -46,6 +49,9 @@
 /* Begin PBXFileReference section */
 		27756D4C275466E400253C8B /* RLBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLBaseView.swift; sourceTree = "<group>"; };
 		27756D4E2754674100253C8B /* RLUIBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLUIBaseProtocol.swift; sourceTree = "<group>"; };
+		27756D512755D40300253C8B /* RLCAShapeLayerPracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLCAShapeLayerPracticeVC.swift; sourceTree = "<group>"; };
+		27756D532755D49200253C8B /* RLCAPracticeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLCAPracticeType.swift; sourceTree = "<group>"; };
+		27756D552755F52900253C8B /* RLCATextLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLCATextLayerVC.swift; sourceTree = "<group>"; };
 		27B721272750E1100020247E /* RLCoreAnimationPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RLCoreAnimationPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B7212A2750E1100020247E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B7212C2750E1100020247E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +120,15 @@
 				E7F664A978B12C1071653FD6 /* Pods-RLCoreAnimationPracticeTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		27756D502755D2A800253C8B /* CALayers */ = {
+			isa = PBXGroup;
+			children = (
+				27756D512755D40300253C8B /* RLCAShapeLayerPracticeVC.swift */,
+				27756D552755F52900253C8B /* RLCATextLayerVC.swift */,
+			);
+			path = CALayers;
 			sourceTree = "<group>";
 		};
 		27B7211E2750E1100020247E = {
@@ -193,7 +208,9 @@
 		27B721602750ECA60020247E /* CoreAnimationPractice */ = {
 			isa = PBXGroup;
 			children = (
+				27756D532755D49200253C8B /* RLCAPracticeType.swift */,
 				27B721642750F4960020247E /* RLCoreAnimationPracticeVC.swift */,
+				27756D502755D2A800253C8B /* CALayers */,
 			);
 			path = CoreAnimationPractice;
 			sourceTree = "<group>";
@@ -459,10 +476,13 @@
 				27B721652750F4960020247E /* RLCoreAnimationPracticeVC.swift in Sources */,
 				27B7212F2750E1100020247E /* ViewController.swift in Sources */,
 				27B7212B2750E1100020247E /* AppDelegate.swift in Sources */,
+				27756D522755D40300253C8B /* RLCAShapeLayerPracticeVC.swift in Sources */,
 				27B7215C2750E9380020247E /* RLLog.swift in Sources */,
 				27B721632750F4800020247E /* RLBaseVC.swift in Sources */,
 				27B7212D2750E1100020247E /* SceneDelegate.swift in Sources */,
 				27756D4F2754674100253C8B /* RLUIBaseProtocol.swift in Sources */,
+				27756D542755D49200253C8B /* RLCAPracticeType.swift in Sources */,
+				27756D562755F52900253C8B /* RLCATextLayerVC.swift in Sources */,
 				27B7215F2750EB170020247E /* RLSQLLiteManager.swift in Sources */,
 				27756D4D275466E400253C8B /* RLBaseView.swift in Sources */,
 			);

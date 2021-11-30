@@ -12,6 +12,8 @@ class ViewController: RLBaseVC {
     static let cellId = "TBCell"
     
     fileprivate lazy var tableView: UITableView = UITableView(frame: view.bounds, style: .grouped)
+    
+    fileprivate lazy var practiceTypes: [RLCAPracticeType] = [.normal, .shapeLayer, .textLayer]
 
 }
 
@@ -20,7 +22,7 @@ extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "App"
+        title = "Core Animation"
         
         configTableView()
     }
@@ -44,7 +46,7 @@ extension ViewController {
 extension ViewController {
     
     fileprivate func configTableView() {
-        tableView.separatorStyle = .none
+//        tableView.separatorStyle = .none
         tableView.sectionFooterHeight = 0.001
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
         tableView.dataSource = self
@@ -64,7 +66,7 @@ extension ViewController: UITableViewDataSource & UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return practiceTypes.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -72,8 +74,10 @@ extension ViewController: UITableViewDataSource & UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cType = practiceTypes[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: Self.cellId)
-        cell?.textLabel?.text = "Core Animation"
+        cell?.textLabel?.text = cType.string
         cell?.accessoryType = .disclosureIndicator
 
         return cell!
@@ -88,9 +92,21 @@ extension ViewController: UITableViewDataSource & UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        log.debug("点击 section = \(indexPath.section) row = \(indexPath.row)")
+        let cType = practiceTypes[indexPath.row]
+
+        log.debug("点击 section = \(indexPath.section) row = \(indexPath.row), cType = \(cType.string)")
         
-        gotoCoreAnimationPractice()
+        switch cType {
+        case .normal:
+            gotoCoreAnimationPractice(type: cType)
+        
+        case .shapeLayer:
+            gotoShapeLayer(type: cType)
+            
+        case .textLayer:
+            gotoTextLayer(type: cType)
+        }
+        
     }
     
 //    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -113,8 +129,21 @@ extension ViewController: UITableViewDataSource & UITableViewDelegate {
 // MARK: -
 extension ViewController {
     
-    fileprivate func gotoCoreAnimationPractice() {
+    fileprivate func gotoCoreAnimationPractice(type: RLCAPracticeType) {
         let vc = RLCoreAnimationPracticeVC()
+        vc.title = type.string
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    fileprivate func gotoShapeLayer(type: RLCAPracticeType) {
+        let vc = RLCAShapeLayerPracticeVC()
+        vc.title = type.string
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    fileprivate func gotoTextLayer(type: RLCAPracticeType) {
+        let vc = RLCATextLayerVC()
+        vc.title = type.string
         navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -17,10 +17,7 @@ extension RLCoreAnimationPracticeVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .gray
-        
-        title = "Practice"
         
 //        addSubLayers()
 //
@@ -32,7 +29,9 @@ extension RLCoreAnimationPracticeVC {
 //
 //        setLayerShadow()
         
-        setLayerTranform()
+//        setLayerTranform()
+        
+        setLayer3DTranform()
     }
     
 }
@@ -134,6 +133,35 @@ extension RLCoreAnimationPracticeVC {
         layerView.layer.setAffineTransform(cTransform)
     }
     
+}
+
+// MARK: - 3D变换
+@objc extension RLCoreAnimationPracticeVC {
+    
+    func setLayer3DTranform() {
+        setLayerContents()
+    
+//        setLayer3DRotationTransform()
+        setLayer3DRotationDistanceTransform()
+    }
+
+    func setLayer3DRotationTransform() {
+        let rotationTransform = CATransform3DMakeRotation(.pi / 4, 0, 1, 0)
+        
+        layerView.layer.transform = rotationTransform
+    }
+    
+    // 透视 相机视角
+    func setLayer3DRotationDistanceTransform() {
+        var transform = CATransform3DIdentity
+        // 相机视角
+        transform.m34 = -(1.0 / 500.0)
+        
+        transform = CATransform3DRotate(transform, .pi / 4, 0, 1, 0)
+        
+        layerView.layer.transform = transform
+    }
+
 }
 
 extension RLCoreAnimationPracticeVC: CALayerDelegate {
